@@ -12,6 +12,13 @@ class BankAccount {
         this.accountType = type;
         this.accountBalance = balance;
     }
+    BankAccount(String name, long accNo, String type){
+        this.accountHolderName = name;
+        this.accountNumber = accNo;
+        this.accountType = type;
+        this.accountBalance = 0;
+
+    }
 
     void display() {
         System.out.println("Account Holder: " + accountHolderName);
