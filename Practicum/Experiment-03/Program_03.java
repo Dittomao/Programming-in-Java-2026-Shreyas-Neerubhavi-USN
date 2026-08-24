@@ -1,3 +1,4 @@
+import java.util.Scanner;
 abstract class Vehicle{
     String vehicleNumber;
     String brand;
@@ -28,13 +29,26 @@ class Bike extends Vehicle{
 }
 class Program_03{
     public static void main(String args[]){
+        Scanner a=new Scanner(System.in);
         Vehicle sc;
-        sc=new Car("hello","mustang");
-        sc.startEngine();
-        sc.showVehicleIdentity();
-        sc=new Bike("432134123", "Challenger");
-        sc.startEngine();
-        sc.showVehicleIdentity();
+        System.out.println("Enter the type of vehicle you have: (BIKE/CAR) ");
+        String vehicle1=a.next();
+        System.out.println("Enter the vehicle number ");
+        String vehicle_num=a.next();
+        a.close();
+        if (vehicle1.equals("BIKE")){
+            sc=new Bike(vehicle_num, vehicle1);
+            sc.startEngine();
+            sc.showVehicleIdentity();
+        }
+        else if(vehicle1.equals("CAR")){
+            sc=new Car(vehicle_num, vehicle1);
+            sc.startEngine();
+            sc.showVehicleIdentity();
+        }
+        else{
+            System.out.println("Invalid details");
+        }
 
     }
 }
