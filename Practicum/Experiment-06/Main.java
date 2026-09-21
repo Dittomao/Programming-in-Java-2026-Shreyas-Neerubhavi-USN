@@ -8,7 +8,10 @@ public class Main {
         c.display();
         Loans b = new Loans(232, "Personal", 2300.00);
         b.display();
-        Accounts a=new Accounts(23423423,"Savings",2342342);
+        Accounts a=new Accounts(23423423,"Savings",4000);
+        a.displayBalance();
+        a.deposit(2000);
+        a.withdraw(1000);
         a.displayBalance();
     }
 }
