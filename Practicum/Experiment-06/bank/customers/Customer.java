@@ -12,3 +12,4 @@ public class Customers{
         System.out.println("Cusotmer ID: "+customerId+" \nCustomer Name: "+customerName+" \nContact Number: "+contactNumber);
     }
 }
+
